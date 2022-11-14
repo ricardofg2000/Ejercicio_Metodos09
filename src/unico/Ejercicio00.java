@@ -11,48 +11,74 @@ public class Ejercicio00 {
 		double peso;
 		String nombre;
 		
-		nombre = leerDatoString("¿Como te llamas? ");
-		edad = leerDatoInt("Escribe tu edad: ");
-		curso = leerDatoInt("¿Cuál es tu curso? ");
-		peso = leerDatoDouble("¿Cuanto pesas? ");
+		nombre = leerString("¿Como te llamas? ");
+		edad = leerInt("Escribe tu edad: ");
+		curso = leerInt("¿Cuál es tu curso? ");
+		peso = leerDouble("¿Cuanto pesas? ");
 		
-		System.out.println("Te llamas" + nombre);
-		System.out.println("Tienes " + edad + "años");
-		System.out.println("Cursas" + curso);
-		System.out.println("Tu peso es " + peso);
+		escribir("Te llamas " + nombre);
+		escribir("Tienes " + edad + " años");
+		escribir("Cursas " + curso);
+		escribir("Tu peso es " + peso);
 		
 
 	}
 
-	 static int leerDatoInt(String pregunta) {
+	 static int leerInt(String pregunta) {
 		 Scanner leer = new Scanner(System.in);
 		 int respuesta;
 		 
-		 System.out.print(pregunta);
+		 escribirL(pregunta);
 		 respuesta = Integer.parseInt(leer.nextLine());
 		 
 		 return respuesta;
 	}
 	 
-	 static double leerDatoDouble(String pregunta) {
+	 static double leerDouble(String pregunta) {
 		 Scanner leer = new Scanner(System.in);
 		 double respuesta;
 		 
-		 System.out.print(pregunta);
+		 escribirL(pregunta);
 		 respuesta = Double.parseDouble(leer.nextLine());
 		 
 		 return respuesta;
 	}
 	 
-	 static String leerDatoString(String pregunta) {
+	 static String leerString(String pregunta) {
 		 Scanner leer = new Scanner(System.in);
 		 String respuesta;
 		 
-		 System.out.print(pregunta);
+		 escribirL(pregunta);
 		 respuesta = leer.nextLine();
 		 
 		 return respuesta;
 	}
+	 
+	 static float leerFloat(String pregunta) {
+		 Scanner leer = new Scanner(System.in);
+		 float respuesta;
+		 
+		 escribirL(pregunta);
+		 respuesta = Float.parseFloat(leer.nextLine());
+		 
+		 return respuesta;
+	}
+	 
+	 static byte leerByte(String pregunta) {
+		 Scanner leer = new Scanner(System.in);
+		 byte respuesta;
+		 
+		 escribirL(pregunta);
+		 respuesta = Byte.parseByte(leer.nextLine());
+		 
+		 return respuesta;
+	}
 
+	static void escribir(String texto) {
+		System.out.println(texto);
+	}
 	
+	static void escribirL(String texto) {
+		System.out.print(texto);
+	}
 }
