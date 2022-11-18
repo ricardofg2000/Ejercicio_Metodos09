@@ -30,9 +30,8 @@ public class Ejercicio09 {
 		int sumDiv2 = 0;
 		sumDiv1 = sumaDivisores(n1);
 		sumDiv2 = sumaDivisores(n2);
-		if (sumDiv1 == sumDiv2) {
-			amigo = true;
-		}
+		amigo = (sumDiv1 == sumDiv2);
+		
 		return amigo;
 	}
 
@@ -40,9 +39,13 @@ public class Ejercicio09 {
 		int suma = 0;
 		for (int i = 1; i <= num; i++) {
 			if (num % i == 0) {
+				//ver lo divisores, extra
+				Util.escribir(i);
 				suma += i;
 			}
 		}
+		//ver la suma
+		Util.escribir(suma);
 		return suma;
 	}
 
